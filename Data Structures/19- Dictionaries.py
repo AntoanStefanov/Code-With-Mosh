@@ -25,3 +25,22 @@ point['x'] = 10
 point['z'] = 20
 
 print(point)
+
+# When reading a value, if we use an invalid key we get an error
+# Look up the value of the item with the key 'a'.
+# print(point['a'])
+# KeyError
+# Two workarounds here:
+# First : check for the existence of a key
+
+if 'a' in point:
+    print(point['a'])
+
+# Second: use get method
+# Instead of using
+# point['a']
+# We call the get method
+print(point.get('a'))
+# If the key doesn't exist , by default returns None
+# Or we can pass a default value as a second argument
+print(point.get('a', 0))
