@@ -44,3 +44,14 @@ print(point.get('a'))
 # If the key doesn't exist , by default returns None
 # Or we can pass a default value as a second argument
 print(point.get('a', 0))
+
+# To delete an item we use the del or delete statement
+del point['x']
+print(point)
+
+
+# Loop over dictionary
+# In each iteration our loop variable, will hold the key of an item , so rename it to key
+# We can print the value associated with the key
+for key in point:
+    print(key, point[key])
