@@ -55,3 +55,13 @@ print(point)
 # We can print the value associated with the key
 for key in point:
     print(key, point[key])
+
+# Another way for iteration over dict
+
+for x in point.items():
+    print(x)
+
+# In each iteration we get a tuple of key and value, so we can unpack it.
+
+for key, value in point.items():
+    print(key, value)
