@@ -10,13 +10,14 @@ point = {'x': 1, 'y': 2}
 # With this func we pass one or more keyword arguments
 point = dict(x=1, y=2)  # Cleaner and shorter
 
-# In Python we can only use immutable types for the keys so quite often we use strings and numbers.
+# In Python we can only use immutable types for the keys so quite often we use strings and numbers, (tuples).
 # But the value can be of any type.
 
 # We can get the value associated with a key using an index. Our index is the name of a key.
 # point of x
 print(point['x'])
-# Because dicts are collections of key value pairs , we cannot an item using a numerate index as we do with list.
+# Because dicts are collections of key value pairs,
+# we cannot access an item using a numeric index as we do with list. point[0]
 
 # We can change the value of x to a new value
 point['x'] = 10
