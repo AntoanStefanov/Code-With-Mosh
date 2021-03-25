@@ -1,2 +1,2 @@
-# Code-With-Mosh-Python
+# Code-With-Mosh
 Complete Python Course
