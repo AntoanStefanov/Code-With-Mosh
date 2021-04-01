@@ -64,4 +64,5 @@ print(combined_dictionary)
 combined_dictionary = {**first_dictionary, **second_dictionary, 'z': 3}
 print(combined_dictionary)
 
-# RECAP: WE CAN USE UNPACKING OPERATOR 
+# RECAP: WE CAN USE UNPACKING OPERATOR
+# TO TAKE OUT INDIVIDUAL VALUES IN ANY INTERABLE.
