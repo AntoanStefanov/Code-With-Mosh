@@ -52,12 +52,16 @@ print(values)
 # If you use 1 * only the keys will combine, they are unordered.
 # ** takes out all key value pairs in a dictionary
 first_dictionary = {'x': 1}
-second_dictionary = {'x': 1, 'y': 2}
+second_dictionary = {'x': 10, 'y': 2}
 
 combined_dictionary = {**first_dictionary, **second_dictionary}
 print(combined_dictionary)
+# NOTE that the value of x is 10, if you have multiple items with same key
+# the last value will be used.
 
 # we can add additionally another key value pair
 
-combined_dictionary = {**first_dictionary, **second_dictionary}
+combined_dictionary = {**first_dictionary, **second_dictionary, 'z': 3}
 print(combined_dictionary)
+
+# RECAP: WE CAN USE UNPACKING OPERATOR 
