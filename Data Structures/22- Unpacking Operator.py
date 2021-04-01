@@ -35,4 +35,29 @@ result = [*range(5), *'Hello']
 print(result)
 
 # Another example . Using this operator, we can combine multiple lists.
-first_list = []
+first_list = [1, 2]
+second_list = [3, 4]
+# To combine the lists , we unpack the first one and then the second one
+
+values = [*first_list, *second_list]
+print(values)
+# We can also put something in the middle
+values = [*first_list, 'hi', *second_list]
+print(values)
+# Or unpack a string at the end
+values = [*first_list, 'hi', *second_list, *'Hello']
+print(values)
+
+# We can also unpack dictionaries but we need too use 2 asterisks(**)
+# If you use 1 * only the keys will combine, they are unordered.
+# ** takes out all key value pairs in a dictionary
+first_dictionary = {'x': 1}
+second_dictionary = {'x': 1, 'y': 2}
+
+combined_dictionary = {**first_dictionary, **second_dictionary}
+print(combined_dictionary)
+
+# we can add additionally another key value pair
+
+combined_dictionary = {**first_dictionary, **second_dictionary}
+print(combined_dictionary)
