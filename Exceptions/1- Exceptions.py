@@ -11,3 +11,9 @@ print(numbers[2])
 # Another example: 
 
 age = int(input('Age: '))
+
+# If user input is 'a' , program crashes
+# We get an exception of type value error.
+
+# It's your job to handle these exceptions and prevent 
+# Your application from crashing
