@@ -1,9 +1,11 @@
 try:
     age = int(input('Age: '))
-except ValueError:
+except ValueError as ex: # ex as exception
     print("You didn't enter a valid age.")
+    print(ex) # The actual error message that is included in exception
+    print(type(ex))
 else:
-
+    print('No exceptions were thrown.')
 print('Execution continues')
 
 # Continue with the code from last lecture to handle
@@ -30,4 +32,24 @@ print('Execution continues')
 # if we put this print statement after getting user;s age this print will not be executed.
 
 # We also have an optional else clause here
-# And what we put in 
+# And what we put inside this block will be executed if no exception
+# is thrown in the code that we add to the try block.
+# so, what we have in else clause will only be executed if we don't have any exceptions
+# very similar to for else loops.
+# I told you that the else statement is executed,
+# If we don't break out of the for loop.
+# In other words, if the for loop completes then the else clause is executed.
+
+# So, here's a basic structure for handling exceptions.
+# One more thing before we finish.
+# When handling exceptions, we can optionally define a variable that will
+# include the details about the exception.
+# Mostly, the error message and sometimes additional arguments
+# So , here we add 'as' and then define a variable, like 'error' or 'ex' for exception.
+# after this error message let's just print the variable, also the type of variable(ex):
+
+# invalid literal for int() with base 
+# 10: 'a'
+# <class 'ValueError'>
+
+# This is very technical to show to an end user, so we're not going to print it on the terminal
