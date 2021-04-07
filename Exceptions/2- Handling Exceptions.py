@@ -54,3 +54,5 @@ print('Execution continues')
 
 # This is very technical to show to an end user, so we're not going to print it on the terminal
 # It's just for demonstration purposes
+# And below that you can see the type of this exception
+# It's an object of type ValueError
