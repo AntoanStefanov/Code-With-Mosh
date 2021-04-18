@@ -51,3 +51,9 @@ print('second code=', timeit(code2, number=10000))
 # If you are building a simple application for a few users raising exceptions
 # in your functions is not going to have a bad impact on the performance of your app.
 
+# But if you are building application where performance and scaleability is important,
+# then it's better to raise exceptions when you really have to .
+
+# if you can handle the situation with a simple if statement, think twice for exceptions.
+
+# Raise exceptions if YOU REALLY HAVE TO !
