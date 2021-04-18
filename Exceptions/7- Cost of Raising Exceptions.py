@@ -24,3 +24,25 @@ try:
 except ValueError as error:
     pass
 '''
+# Now we call timeit
+#  - first arg = python code , second arg(keyword arg) = number of exectutions
+print('first code=', timeit(code1, number=10000))
+# This function returns the exectution time of the code after 10 000 repetitions.
+
+
+# DIfferent approach ### 4 times faster
+code2 = '''
+def calculate_xfactor(age):
+    if age <= 0:
+        None
+    return age / 10
+
+
+xfactor = calculate_xfactor(-1)
+if xfactor == None:
+    pass
+'''
+
+print('second code=', timeit(code2, number=10000))
+
+
