@@ -46,3 +46,8 @@ if xfactor == None:
 print('second code=', timeit(code2, number=10000))
 
 
+# that's so because we execute the code 10 000 times
+# 1 time execution no difference
+# If you are building a simple application for a few users raising exceptions
+# in your functions is not going to have a bad impact on the performance of your app.
+
