@@ -7,6 +7,11 @@ class Point:
         self.x = x
         self.y = y
 
+    # define str method
+    def __str__(self):  # one parameter self
+        # we should simply return a string representation of this point object
+        return f'({self.x}, {self.y})'
+
     def draw(self):
         print(f'Point ({self.x}, {self.y})')
 
@@ -25,6 +30,19 @@ point.draw()
 
 # if we print point object(14 line)
 
-print(point)
+# print(point) # with no str reimplementation
 # We get <__main__.Point object at 0x01576820>  --> the name of our module followed by the class name and
 # the address of this point object in memory.This is the default implementation of the str magic method in our point object.
+
+# If we write point. you can see all the magic methods that are available in our point object.
+# We didn't explicitly create these methods, our point object inherited them from another object. This is what we call
+# INHERITANCE - coming soon.
+
+# Now in this list you can see we have this str method
+
+# point.__str__ # By default this returns the name of our module followed by the class name and
+# the address of this point object in memory
+
+# Now, let's reimplement this method to get a better result. # Back to our class.
+
+print(point)
