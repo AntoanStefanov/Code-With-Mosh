@@ -46,3 +46,6 @@ print(point > other)
 print(point < other)
 
 # We get False.
+# As you can see we don't have to explicitly implement each of these operators.
+# When you implement the greater than magic method, Python will automatically figure out what to do if you use the less than
+# operator.
