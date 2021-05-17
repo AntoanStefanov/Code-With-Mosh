@@ -45,4 +45,9 @@ point.draw()
 
 # Now, let's reimplement this method to get a better result. # Back to our class.
 
-print(point)
+print(point)  # we get (1, 2)
+# this is very useful, we get the same result
+
+# We get the same result if we also try to convert a point object to a string using the str function.
+
+print(str(point))
