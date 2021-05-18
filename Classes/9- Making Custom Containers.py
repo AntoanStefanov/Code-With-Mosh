@@ -32,6 +32,7 @@ class TagCloud:  # Creating a class
         # Here we should check if the tag has been added already. If we don't have it we are setting its value to 1,
         # otherwise increment the value with 1.
         # One way to implement this logic.
+        tag = tag.lower()
         self.tags[tag] = self.tags.get(tag, 0) + 1  # With get method
 
 
@@ -49,7 +50,26 @@ class TagCloud:  # Creating a class
 # # These are the operations that are supported by this custom container type
 cloud = TagCloud()
 cloud.add('python')
+cloud.add('python')
+cloud.add('python')
 print(cloud.tags)
 
 # Why we created a custom class instead of using a plain old dictionary,
 # The reason for this is because I want to make it a little bit smarter than a typical dictionary.
+cloud.add('Python')
+cloud.add('python')
+cloud.add('python')
+print(cloud.tags)
+# What if we add the python tag with capital P ?
+# Technically, this is the same tag as the lowercase python,
+# so when we run it it should be one python tag repeated 3 times.
+# That's not what we get 2 seperate items , that's typical dict.
+# In this class I am going to take care of case-sensitivity.
+# Whatever tag we recieve, we will convert it to lowercase.
+
+# So with this class, we're encapsulating the complexity around the case-sensitivity of tags,
+# when using this class we no longer have to worry about lowercase or uppercase chars.
+# So our code looks cleaner and simpler. All the complexity is encapsulated in the tag cloud class.
+# It's not visible to the rest of our program.
+
+# Next Level
