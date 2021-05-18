@@ -35,6 +35,11 @@ class TagCloud:  # Creating a class
         tag = tag.lower()
         self.tags[tag] = self.tags.get(tag, 0) + 1  # With get method
 
+    def __getitem__(self, tag):  # It should take self as well as a key
+        # return self.tags[key] # If the key does not exist we get error so use get method
+
+        return self.tags.get(tag.lower(), 0)  # So if doesn't exist we return 0
+
 
 # # Because this class represents a container, it supports various operations around containers
 # cloud = TagCloud()  # creating an object
@@ -46,7 +51,6 @@ class TagCloud:  # Creating a class
 # # And iterating over the container
 # for tag in cloud:
 #     print(tag)
-
 # # These are the operations that are supported by this custom container type
 cloud = TagCloud()
 cloud.add('python')
@@ -73,3 +77,12 @@ print(cloud.tags)
 # It's not visible to the rest of our program.
 
 # Next Level
+
+# I want to be able to read the count of a tag like this - using square brackets.
+print(cloud['python'])
+print(cloud['js'])
+# For that we need a magic method __getitem__ or we will have an error: TypeError: 'TagCloud' object is not subscriptable.
+# Line 38 ^
+
+# As You can see with this implementation we can easily get the number of a given tag, we can't do this with
+# typical dict
