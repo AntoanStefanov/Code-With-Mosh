@@ -37,6 +37,10 @@ print(cloud.tags['PYTHON'])
 
 # To fix this problem we need to hide this attribute from the outside, so we cannot access it
 
-# print(cloud.tags['PYTHON']) -> AttributeError: 'TagCloud' object has no attribute 'tags'
+# print(cloud.tags['PYTHON']) -> EXCEPTION  of type -- > AttributeError: 'TagCloud' object has no attribute 'tags'
 
 # If we use the dot operator
+# cloud. # We no longer have tags here, also dont have __tags
+
+# That's how we make certain attributes or methods private with __.
+
