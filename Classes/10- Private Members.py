@@ -9,16 +9,16 @@ class TagCloud:
         self.__tags[tag] = self.__tags.get(tag, 0) + 1
 
     def __getitem__(self, tag):
-        return self.tags.get(tag.lower(), 0)
+        return self.__tags.get(tag.lower(), 0)
 
     def __setitem__(self, tag, count):
-        self.tags[tag.lower()] = count
+        self.__tags[tag.lower()] = count
 
     def __len__(self):
-        return len(self.tags)
+        return len(self.__tags)
 
     def __iter__(self):
-        return iter(self.tags)
+        return iter(self.__tags)
 
 
 cloud = TagCloud()  # TagCloud object
@@ -29,7 +29,7 @@ cloud.add('Python')  # Calling add method passing Python
 print(cloud['PYTHON'])  # We get 3. The program is working
 # HOWEVER, If I access the underlying dictionary in this class our program will CRASH
 # KeyError: 'PYTHON' That's exception. Because we dont have this key in our dictionary,
-print(cloud.tags['PYTHON'])
+# print(cloud.tags['PYTHON'])
 # everything in our dictionary is stored in lowercase.
 
 # So the problem with this class is that it gives us access to the underlying dictionary(self.tags)
@@ -44,3 +44,16 @@ print(cloud.tags['PYTHON'])
 
 # That's how we make certain attributes or methods private with __.
 
+# Technically, these members are still accessible from the outside, it's just harder to access them.
+
+# The point of this practice is not security, it's more of a warning or alert to someone who is using this class.
+
+# It's telling the consumer of this class, hey, don't touch this, it's private.
+
+# You can access them this way:
+# Every class or every class/object has this property __dict__
+print(cloud.__dict__)  # dictionary THAT HOLD ALL THE ATTRIBUTES IN THIS CLASS.
+
+# THIS CLASS HAVE THIS ATTRIBUTE : _TagCloud__tags
+
+#
