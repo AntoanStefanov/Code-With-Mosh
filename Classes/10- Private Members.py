@@ -56,4 +56,12 @@ print(cloud.__dict__)  # dictionary THAT HOLD ALL THE ATTRIBUTES IN THIS CLASS.
 
 # THIS CLASS HAVE THIS ATTRIBUTE : _TagCloud__tags
 
-#
+# When Python interpreter  runs this code, it automatically rename this atribute and prefix it with _name of the class
+
+# We can still access it with this attribute
+
+print(cloud._TagCloud__tags)
+
+# In Python, unlike Java, C#, we don't really have the concept of private members, they are still accessible
+
+# Using double underscore is more of a convention to prevent accidental access of these private members.
