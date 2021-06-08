@@ -6,7 +6,7 @@
 from sales import calc_shipping, calc_tax
 # Now we can call the function, just like we have defined in our app module.
 # Shortcut to import multiple objects. It's shorter but it's bad practice,
-from sales import *
+#from sales import *
 # Because in that module you could have several different functions or variables,
 # and if you blindly import them into the current module, some of those objects may overwrite
 # the objects with the same name in the current module. SO DONT IMPORT ALL OBJECTS LIKE THIS.
